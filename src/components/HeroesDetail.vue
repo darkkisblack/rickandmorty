@@ -32,11 +32,12 @@
                 <h5 class="mt-2">Список эпизодов</h5>
                 <table class="table table-hover table-striped">
                   <tbody>
-                    <tr
-                      v-for="(value, index) in character.episode"
-                      :key="index"
-                    >
-                      <td>{{ value }}</td>
+                    <tr v-for="episode in episodes" :key="episode">
+                      <td>
+                        <router-link :to="{ path: `/episode/${episode.id}` }">
+                          {{ episode.name }}
+                        </router-link>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -65,6 +66,7 @@ export default {
       url: "https://rickandmortyapi.com/api",
       id: window.location.pathname,
       character: {},
+      episodes: [],
       originId: 1,
     };
   },
@@ -77,8 +79,19 @@ export default {
         .then((res) => res.json())
         .then((res) => {
           this.character = res;
+          res.episode.forEach((element) => {
+            const extractEpisode = /\/\bepisode\b\/\d+$/.exec(element);
+            this.fetchEpisode(extractEpisode);
+          });
           this.originId = /\d+$/.exec(res.origin.url);
         })
+        // eslint-disable-next-line
+        .catch((err) => console.log(err));
+    },
+    fetchEpisode(episodePath) {
+      fetch(this.url + episodePath)
+        .then((res) => res.json())
+        .then((res) => this.episodes.push(res))
         // eslint-disable-next-line
         .catch((err) => console.log(err));
     },
