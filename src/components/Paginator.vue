@@ -7,7 +7,7 @@
         </a>
       </li>
       <li class="page-item">
-        <a class="page-link">{{ page }}</a>
+        <a class="page-link">{{ page }} из {{ info.pages }} </a>
       </li>
       <li v-show="info.next != ''" class="page-item">
         <a class="page-link" @click="changePage(page + 1)">

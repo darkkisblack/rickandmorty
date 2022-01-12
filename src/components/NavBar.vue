@@ -18,18 +18,18 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
+            <router-link class="nav-link" :to="{ path: '/Episodes' }"
+              >Эпизоды</router-link
+            >
+          </li>
+          <li class="nav-item">
             <router-link class="nav-link" :to="{ name: 'Heroes' }"
-              >Heroes</router-link
+              >Персонажи</router-link
             >
           </li>
           <li class="nav-item">
             <router-link class="nav-link" :to="{ name: 'Location' }"
-              >Location</router-link
-            >
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" :to="{ path: '/Episodes' }"
-              >Episodios</router-link
+              >Локации</router-link
             >
           </li>
         </ul>
@@ -45,6 +45,9 @@ export default {
 </script>
 
 <style>
+.nav-link {
+  font-weight: bold;
+}
 nav.navbar.navbar-dark {
   background-color: #18192b;
 }

@@ -70,7 +70,7 @@ export default {
   background-color: #0c97a7;
 }
 .bg-lightblue {
-  background-color: #0faebf;
+  background-color: #ffffff;
 }
 .card .list-group.list-group-flush .list-group-item {
   background-color: #0faebf;

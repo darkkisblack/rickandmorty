@@ -1,10 +1,20 @@
 <template>
-  <div class="container py-3 shadow rounded">
+  <div class="container py-3 shadow rounded border border-dark border-2">
     <div class="row my-3 mx-auto">
       <div class="col-lg-8">
         <div class="tab-content pb-3">
           <div class="tab-pane active" :id="character.id">
-            <div class="row shadow rounded bg-blue my-5 p-3">
+            <div
+              class="
+                row
+                shadow
+                rounded
+                bg-blue
+                my-5
+                p-3
+                border border-dark border-2
+              "
+            >
               <div class="col-md-12 p-0">
                 <h3>{{ character.name }}</h3>
                 <hr class="long" />
@@ -27,7 +37,7 @@
               </div>
             </div>
 
-            <div class="row">
+            <div class="row border border-dark border-2">
               <div class="col-md-12 shadow rounded bg-blue p-3">
                 <h5 class="mt-2">Список эпизодов</h5>
                 <table class="table table-hover table-striped">
@@ -50,7 +60,13 @@
       <div class="col-lg-4 mt-2 text-sm-center">
         <img
           :src="character.image"
-          class="mx-auto img-fluid shadow-lg rounded"
+          class="
+            mx-auto
+            img-fluid
+            shadow-lg
+            rounded
+            border border-dark border-2
+          "
           alt="avatar"
         />
       </div>
@@ -110,6 +126,6 @@ hr.short {
   background-color: #0c97a7;
 }
 .bg-blue {
-  background-color: #0faebf;
+  background-color: #ffffff;
 }
 </style>

@@ -6,15 +6,15 @@
         <hr class="long" />
       </div>
       <div class="col-md-6">
-        <p>Тип: {{ location.type }}</p>
+        <h5>Тип: {{ location.type }}</h5>
       </div>
       <div class="col-md-6">
-        <p>Измерение: {{ location.dimension }}</p>
+        <h5>Измерение: {{ location.dimension }}</h5>
       </div>
 
       <div class="row mx-auto col-md-8 my-3">
         <div class="col-md-12 shadow rounded bg-lightblue p-3">
-          <h5 class="mt-2">Жители</h5>
+          <h5 class="mt-2">Жители:</h5>
           <table class="table table-hover table-striped">
             <tbody>
               <tr v-for="resident in residents" :key="resident.id">
@@ -76,10 +76,10 @@ export default {
   background-color: #0c97a7;
 }
 .bg-lightblue {
-  background-color: #0faebf;
+  background-color: #ffffff;
 }
 .card .list-group.list-group-flush .list-group-item {
-  background-color: #0faebf;
+  background-color: #f9fbfc;
   border-color: #18192b;
 }
 td a {
